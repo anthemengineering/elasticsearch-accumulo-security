@@ -10,9 +10,9 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     <scm>
-        <url>https://github.com/texeltek/elasticsearch-accumulo-security</url>
-        <connection>scm:git:git@github.com:texeltek/elasticsearch-accumulo-security.git</connection>
-        <developerConnection>scm:git:git@github.com:texeltek/elasticsearch-accumulo-security.git</developerConnection>
+        <url>https://github.com/anthemengineering/elasticsearch-accumulo-security</url>
+        <connection>scm:git:git@github.com:anthemengineering/elasticsearch-accumulo-security.git</connection>
+        <developerConnection>scm:git:git@github.com:anthemengineering/elasticsearch-accumulo-security.git</developerConnection>
       <tag>HEAD</tag>
     </scm>
     <dependencies>
