@@ -15,6 +15,26 @@
         <developerConnection>scm:git:git@github.com:anthemengineering/elasticsearch-accumulo-security.git</developerConnection>
       <tag>HEAD</tag>
     </scm>
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>anthemengineering-s3-snapshot</id>
+            <url>s3://s3-maven.anthemengineering.com/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>anthemengineering-s3-release</id>
+            <url>s3://s3-maven.anthemengineering.com/release</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>org.elasticsearch</groupId>
@@ -149,5 +169,24 @@
                 <version>2.4.1</version>
             </plugin>
         </plugins>
+        <extensions>
+            <extension>
+                <groupId>org.springframework.build</groupId>
+                <artifactId>aws-maven</artifactId>
+                <version>5.1.0.BUILD-SNAPSHOT</version>
+            </extension>
+        </extensions>
     </build>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>anthemengineering-s3-snapshot</id>
+            <name>S3 Snapshot Repository</name>
+            <url>s3://s3-maven.anthemengineering.com/snapshot</url>
+        </snapshotRepository>
+        <repository>
+            <id>anthemengineering-s3-release</id>
+            <name>S3 Release Repository</name>
+            <url>s3://s3-maven.anthemengineering.com/release</url>
+        </repository>
+    </distributionManagement>
 </project>
